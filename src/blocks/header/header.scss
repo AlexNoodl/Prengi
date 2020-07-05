@@ -1,0 +1,43 @@
+.header {
+    min-height: 66px;
+
+    &__wrapper {
+        margin-top: 19px;
+    }
+
+    &__item {
+        display: flex;
+    }
+
+    &__img {
+        width: 28px;
+        height: 21px;
+        margin-right: 11px;
+
+    }
+
+    &__text {
+        line-height: 18px;
+        color: #242424;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &__address,
+    &__phone,
+    &__email {
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    &__phone,
+    &__email {
+        color: #242424;
+        text-decoration: none;
+        text-decoration-style: none;
+        cursor: pointer;
+    }
+}

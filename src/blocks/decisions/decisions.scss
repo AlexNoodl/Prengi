@@ -1,0 +1,65 @@
+.decisions {
+    padding: 79px 0 61px 0;
+    min-height: 889px;
+    background: url('../img/decisions/decisions.png') center (center/cover) no-repeat;
+
+    &__border {
+        display: block;
+        margin: 0 auto;
+        margin-top: 52px;
+        border: 2px solid #ffffff;
+        border-radius: 5px;
+        width: 843px;
+        height: 65px;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    &__item {
+        margin-top: 19px;
+        border-right: 1px solid #8a9a9c;
+        padding-right: 27px;
+
+        &:last-child {
+            border-right: none
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        color: #ffffff;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            color: $blue;
+            text-decoration: none;
+        }
+    }
+
+    &__slider {
+        width: 1006px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 44px;
+        display: flex;
+        align-items: center;
+
+        &-btn {
+            width: 18px;
+            height: 60px;
+            cursor: pointer;
+        }
+
+        &__item {
+            width: 947px;
+            height: 560px;
+        }
+    }
+}

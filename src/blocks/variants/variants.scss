@@ -1,0 +1,55 @@
+.variants {
+    min-height: 580px;
+    background: url(../img/variants/variants.png) center (center/cover) no-repeat;
+
+    &__wrapper {
+        margin-top: 90px;
+        position: relative;
+    }
+
+
+
+    &__rectagle {
+        width: 167px;
+        height: 167px;
+        background-color: #00c2f0;
+        opacity: 0.3;
+        margin-left: 360px;
+
+
+        &_right {
+            margin: 0 0 0 33px;
+        }
+    }
+
+    &__text {
+        position: relative;
+        top: -122px;
+        color: #ffffff;
+    }
+
+    &__subtitle {
+        // position: relative;
+
+
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin-left: 132px;
+
+        &_right {
+            margin-left: 68px;
+        }
+    }
+
+    &__descr {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 20px 0 0 45px;
+
+        &_right {
+            margin-left: 68px;
+        }
+    }
+}

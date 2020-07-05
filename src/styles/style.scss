@@ -1,0 +1,12 @@
+@import './bootstrap.min.css';
+@import './bootstrap-grid.min.css';
+@import './animate.css';
+
+@import './helpers/_mixins.scss';
+@import './helpers/_variables.scss';
+
+@import './base/general.scss';
+@import './base/fonts.scss';
+@import './base/btn.scss';
+@import './base/title.scss';
+@import '@blocks/blocks.scss';
