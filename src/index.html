@@ -10,6 +10,22 @@
 
 <body>
     <div id="root"></div>
+    <!-- Header -->
+    <%= _.template(require('@blocks/header/header.html'))() %>
+    <!-- Main -->
+    <%= _.template(require('@blocks/main/main.html'))() %>
+    <!-- С Prengi-->
+    <%= _.template(require('@blocks/withPrengi/withPrengi.html'))() %>
+    <!-- Решения -->
+    <%= _.template(require('@blocks/decisions/decisions.html'))() %>
+    <!-- Преимущества -->
+    <%= _.template(require('@blocks/advantages/advantages.html'))() %>
+    <!-- Варианты -->
+    <%= _.template(require('@blocks/variants/variants.html'))() %>
+    <!-- Доступ -->
+    <%= _.template(require('@blocks/access/access.html'))() %>
+    <!-- Footer -->
+    <%= _.template(require('@blocks/footer/footer.html'))() %>
 </body>
 
 </html>

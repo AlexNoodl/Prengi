@@ -5,7 +5,10 @@ const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer");
+const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+   .BundleAnalyzerPlugin;
+const ImageminPlugin = require("imagemin-webpack-plugin").default;
 
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
@@ -95,9 +98,30 @@ const plugins = () => {
       }),
    ];
 
-   // if (isProd) {
-   //    base.push(new BundleAnalyzerPlugin());
-   // }
+   if (isProd) {
+      base.push(
+         // new BundleAnalyzerPlugin(),
+         // new ImageminWebpWebpackPlugin({
+         //    config: [
+         //       {
+         //          test: /\.(jpe?g|png)/,
+         //          options: {
+         //             quality: "95-100",
+         //          },
+         //       },
+         //    ],
+         //    overrideExtension: false,
+         //    detailedLogs: false,
+         //    silent: false,
+         //    strict: true,
+         // }),
+         new ImageminPlugin({
+            pngquant: {
+               quality: "75",
+            },
+         })
+      );
+   }
 
    return base;
 };
@@ -109,7 +133,8 @@ module.exports = {
       main: ["@babel/polyfill", "./index.js"],
    },
    output: {
-      filename: "index.js",
+      filename: "[name].js",
+      chunkFilename: "[name].js",
       path: path.resolve(__dirname, "dist"),
    },
    resolve: {
@@ -131,8 +156,9 @@ module.exports = {
       rules: [
          //Loader HTML
          {
-            test: /\.html$/i,
-            loader: "html-loader",
+            test: /\.html$/,
+            include: path.resolve(__dirname, "src/blocks"),
+            loader: ["html-loader"],
          },
          //Loader CSS
          {
@@ -152,12 +178,18 @@ module.exports = {
          // Loader Images
          {
             test: /\.(png|jpg|jpeg|svg|gif)$/,
-            use: ["file-loader"],
+            loader: "file-loader",
+            options: {
+               outputPath: "images",
+            },
          },
          // Loader Fonts
          {
             test: /\.(ttf|woff|woff2|eot)$/,
-            use: ["file-loader"],
+            loader: "file-loader",
+            options: {
+               outputPath: "fonts",
+            },
          },
          // Loader xml
          {

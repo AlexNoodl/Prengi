@@ -17,14 +17,14 @@
     &_decisions,
     &_advantages,
     &_variants,
-    &_proceed {
+    &_access {
         text-align: center;
         font-size: 30px;
         line-height: 36px;
     }
 
     &_advantages,
-    &_proceed {
+    &_access {
         color: #393939;
     }
 
@@ -32,7 +32,7 @@
         padding-top: 79px;
     }
 
-    &_proceed {
+    &_access {
         margin-top: 74px;
     }
 }
