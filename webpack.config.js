@@ -91,6 +91,14 @@ const plugins = () => {
                from: path.resolve(__dirname, "src/favicon.ico"),
                to: path.resolve(__dirname, "dist"),
             },
+            {
+               from: path.resolve(__dirname, "src/server.php"),
+               to: path.resolve(__dirname, "dist"),
+            },
+            {
+               from: path.resolve(__dirname, "src/img/form"),
+               to: path.resolve(__dirname, "dist/img"),
+            },
          ],
       }),
       new MiniCssExtractPlugin({

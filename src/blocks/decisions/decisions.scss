@@ -44,14 +44,16 @@
     }
 
     &__slider {
-        width: 1006px;
+        position: relative;
         display: block;
         margin: 0 auto;
         margin-top: 44px;
-        display: flex;
-        align-items: center;
+        width: 1006px;
 
         &-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateX(-50%);
             width: 18px;
             height: 60px;
             cursor: pointer;
@@ -61,5 +63,18 @@
             width: 947px;
             height: 560px;
         }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__prev-btn {
+        left: -5%;
+    }
+
+    &__next-btn {
+        left: 100%;
     }
 }

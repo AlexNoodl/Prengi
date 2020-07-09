@@ -3,16 +3,12 @@ const slider = (slides, prev, next) => {
 
    const items = document.querySelectorAll(slides);
 
-   console.log(items);
-
    function showSlides(n) {
       if (n > items.length) {
          slideIndex = 1;
       } else if (n < 1) {
          slideIndex = items.length;
       }
-
-      console.log(slideIndex);
 
       items.forEach((item) => {
          item.classList.add("animate__animated");

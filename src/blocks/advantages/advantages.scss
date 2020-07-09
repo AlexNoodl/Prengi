@@ -7,38 +7,19 @@
     }
 
     &__item {
-        width: 570px;
-        height: 355px;
+        position: relative;
+    }
 
-        &_1 {
-            background: url('../img/advantages/1.png') center center/cover no-repeat;
-        }
-
-        &_2 {
-            background: url('../img/advantages/2.png') center center/cover no-repeat;
-        }
-
-        &_3 {
-            background: url('../img/advantages/3.png') center center/cover no-repeat;
-        }
-
-        &_4 {
-            background: url('../img/advantages/4.png') center center/cover no-repeat;
-        }
-
-        &_5 {
-            background: url('../img/advantages/5.png') center center/cover no-repeat;
-        }
-
-        &_6 {
-            background: url('../img/advantages/6.png') center center/cover no-repeat;
-        }
+    img {
+        width: 100%;
+        height: 100%;
     }
 
     &__subtitle {
+        position: absolute;
+        top: 40%;
+        left: 20%;
         width: 338px;
-        display: block;
-        margin: 25% auto;
         color: #ffffff;
         font-size: 23px;
         font-weight: 400;

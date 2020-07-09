@@ -3,53 +3,62 @@
     background: url(../img/variants/variants.png) center (center/cover) no-repeat;
 
     &__wrapper {
-        margin-top: 90px;
-        position: relative;
+        width: 100%;
     }
 
-
+    &__item {
+        position: relative;
+        margin-top: 90px;
+    }
 
     &__rectagle {
+        position: absolute;
+        left: 80%;
+        transform: translateX(-50%);
         width: 167px;
         height: 167px;
         background-color: #00c2f0;
         opacity: 0.3;
-        margin-left: 360px;
-
 
         &_right {
-            margin: 0 0 0 33px;
+            left: 26%;
         }
     }
 
     &__text {
         position: relative;
-        top: -122px;
+        margin-top: 38px;
         color: #ffffff;
     }
 
     &__subtitle {
-        // position: relative;
-
-
+        position: absolute;
+        left: 47%;
+        transform: translateX(-50%);
         font-size: 30px;
         font-weight: 700;
+        width: 488px;
         line-height: 22px;
         text-transform: uppercase;
-        margin-left: 132px;
+        text-align: right;
 
         &_right {
-            margin-left: 68px;
+            left: 42%;
         }
     }
 
     &__descr {
+        position: absolute;
+        left: 47%;
+        transform: translateX(-50%);
         font-size: 18px;
         font-weight: 300;
-        margin: 20px 0 0 45px;
+        width: 488px;
+        margin-top: 40px;
+        text-align: right;
 
         &_right {
-            margin-left: 68px;
+            left: 58%;
         }
     }
 }
